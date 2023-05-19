@@ -1,0 +1,79 @@
+{
+  "homeassistant": {
+    "homeAssistant": {
+      "states": {
+        "update.home_assistant_supervisor_update": {
+          "entity_id": "update.home_assistant_supervisor_update",
+          "state": "off",
+          "attributes": {
+            "auto_update": true,
+            "installed_version": "2022.12.1",
+            "in_progress": false,
+            "latest_version": "2022.12.1",
+            "release_summary": null,
+            "release_url": "https://github.com/home-assistant/supervisor/releases/tag/2022.12.1",
+            "skipped_version": null,
+            "title": "Home Assistant Supervisor",
+            "entity_picture": "https://brands.home-assistant.io/hassio/icon.png",
+            "friendly_name": "Home Assistant Supervisor Update",
+            "supported_features": 1
+          },
+          "context": {
+            "id": "1234567890123456789012345D",
+            "parent_id": null,
+            "user_id": null
+          },
+          "last_changed": "2023-01-03T07:37:10.842Z",
+          "last_updated": "2023-01-03T07:37:10.842Z"
+        },
+        "sun.sun": {
+          "entity_id": "sun.sun",
+          "state": "below_horizon",
+          "attributes": {
+            "next_dawn": "2023-01-05T07:01:15.443779+00:00",
+            "next_dusk": "2023-01-05T16:24:41.687404+00:00",
+            "next_midnight": "2023-01-04T23:42:51+00:00",
+            "next_noon": "2023-01-05T11:42:37+00:00",
+            "next_rising": "2023-01-05T07:41:19.053015+00:00",
+            "next_setting": "2023-01-05T15:44:37.150146+00:00",
+            "elevation": -53.52,
+            "azimuth": 311.1,
+            "rising": false,
+            "friendly_name": "Sun"
+          },
+          "last_changed": "2023-01-04T15:47:25.719126+00:00",
+          "last_updated": "2023-01-04T21:46:25.885841+00:00",
+          "context": {
+            "id": "1234567890123456789012345C",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "switch.switch_1": {
+          "entity_id": "switch.switch_1",
+          "state": "off",
+          "attributes": {          },
+          "last_changed": "2023-01-03T15:47:25.719126+00:00",
+          "last_updated": "2023-01-03T21:46:25.885841+00:00",
+          "context": {
+            "id": "1234567890123456789012345B",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "switch.switch_2": {
+          "entity_id": "switch.switch_2",
+          "state": "on",
+          "attributes": {          },
+          "last_changed": "2023-01-04T15:47:25.719126+00:00",
+          "last_updated": "2023-01-04T21:46:25.885841+00:00",
+          "context": {
+            "id": "1234567890123456789012345A",
+            "parent_id": null,
+            "user_id": null
+          }
+        }
+      }
+    }
+  }
+}

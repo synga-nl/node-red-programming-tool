@@ -22,7 +22,7 @@ export class Tool {
   // @ts-expect-error: The value is not initiated because this is done automatically in the constructor
   public readonly entities: Entities;
   // @ts-expect-error: The value is not initiated because this is done automatically in the constructor
-  public readonly helpers: Entities;
+  public readonly helpers: Helper;
 
   constructor(public readonly nodeRed: any) {
     Object.entries(Tool.toolClasses).forEach((entry) => {

@@ -1,6 +1,6 @@
 import { Tool } from '../Tool';
 import { CallServiceOutput } from '../Output/CallServiceOutput';
-import {ServiceEnum} from "../Enums/Service/ServiceEnum";
+import { ServiceEnum } from '../Enums/Service/ServiceEnum';
 
 type callback = (callService: CallServiceOutput) => void;
 
@@ -34,7 +34,7 @@ export class Entity {
     return typeof this.entityId !== 'undefined';
   }
 
-  public callService(cb?: string | ServiceEnum | callback): CallServiceOutput | null{
+  public callService(cb?: string | ServiceEnum | callback): CallServiceOutput | null {
     if (!this.tool) {
       throw new Error('The tool was not set for Entity "' + this.entityId + '"');
     }

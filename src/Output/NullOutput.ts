@@ -1,11 +1,11 @@
-import {ResultInterface} from "./ResultInterface";
+import { ResultInterface } from './ResultInterface';
 
 export class NullOutput implements ResultInterface {
-    output(): any {
-        return null;
-    }
+  output(): any {
+    return null;
+  }
 
-    isEmpty(): boolean {
-        return true;
-    }
+  isEmpty(): boolean {
+    return true;
+  }
 }

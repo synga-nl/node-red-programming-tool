@@ -11,8 +11,7 @@ let contents = fs.readFileSync(bundlePath).toString();
 
 // Read the contents of the collection file and append it to the bundle contents
 const collectionContents = fs.readFileSync(collectionPath).toString();
-contents += '\n' + collectionContents + '\n' +
-    `function collect<T>(collection?: T[] | Object): Collection<T>;\n`;
+contents += '\n' + collectionContents + '\n' + `function collect<T>(collection?: T[] | Object): Collection<T>;\n`;
 
 // Remove export declare and an import statement
 contents = contents.replace(/export |declare |\nimport { Collection } from 'collect.js';\n/g, '');
@@ -52,12 +51,11 @@ let installIntelliSenseContents = fs.readFileSync(intelliSensePath).toString();
 // Minify the dts file
 fs.writeFileSync(bundlePath, createMinifier(ts).minify(fs.readFileSync(bundlePath).toString()));
 
-
 // Find the contents wrapped in backticks and replace it with the bundled declaration file contents
 const match = installIntelliSenseContents.match(/`[\s\S]*?`/);
 if (match) {
-    const bundledContents = fs.readFileSync('bundle.d.ts').toString();
-    installIntelliSenseContents = installIntelliSenseContents.replace(match[0], '`\n' + bundledContents + '\n`');
+  const bundledContents = fs.readFileSync('bundle.d.ts').toString();
+  installIntelliSenseContents = installIntelliSenseContents.replace(match[0], '`\n' + bundledContents + '\n`');
 }
 
 // Write the modified InstallIntelliSense contents back to the file

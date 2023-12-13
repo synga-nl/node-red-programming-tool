@@ -8,7 +8,7 @@ export class Time {
   isTimeInRange(stringTime: string, rangeInMinutes: number) {
     const currentTime: Date = new Date();
 
-    const [hours, minutes, seconds] = stringTime.split(':').slice(0,3).map(Number);
+    const [hours, minutes, seconds] = stringTime.split(':').slice(0, 3).map(Number);
     const givenTime: Date = new Date();
 
     givenTime.setHours(hours);

@@ -13,8 +13,8 @@ export class Time {
     givenTime.setHours(hours);
     givenTime.setMinutes(minutes);
 
-    const upperTimeBoundary: Date = new Date(currentTime.getTime() + rangeInMinutes * 60000 + 1); // Upper boundary = given time + range + 1 minute
+    const upperTimeBoundary: Date = new Date(currentTime.getTime() - rangeInMinutes * 60000 + 1); // Upper boundary = given time + range + 1 minute
 
-    return currentTime <= givenTime && givenTime < upperTimeBoundary;
+    return currentTime >= givenTime && givenTime >= upperTimeBoundary;
   }
 }
